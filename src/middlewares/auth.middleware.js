@@ -1,4 +1,4 @@
-import { usersCollecion} from "../database/db.js";
+import { usersCollecion } from "../database/db.js";
 
 import bcrypt from "bcrypt";
 
@@ -28,4 +28,3 @@ export async function signInValidation(req, res, next) {
 
   next();
 }
-
