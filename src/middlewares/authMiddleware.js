@@ -1,12 +1,13 @@
-import { usersCollecion } from "../database/db.js";
+import { usersCollection } from "../database/db.js";
 
 import bcrypt from "bcrypt";
 
 export async function signInValidation(req, res, next) {
   const { email, password } = req.body;
 
+  
   try {
-    const user = await usersCollecion.findOne({ email });
+    const user = await usersCollection.findOne({ email });
 
     if (!user) {
       res.sendStatus(401);

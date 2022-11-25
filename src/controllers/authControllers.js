@@ -1,4 +1,4 @@
-import { sessionsCollection } from "../database/db";
+import { sessionsCollection } from "../database/db.js";
 import { v4 as uuid } from "uuid";
 
 export default async function signIn(req, res) {
