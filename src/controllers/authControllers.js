@@ -7,7 +7,7 @@ export default async function signIn(req, res) {
 
   try {
     await sessionsCollection.insertOne({ token, userId: user._id });
-    res.send({ token });
+    res.status(200).send({ token });
   } catch (err) {
     console.log(err);
     res.sendStatus(500);
